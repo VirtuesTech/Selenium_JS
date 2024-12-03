@@ -3,10 +3,9 @@ import chrome from 'selenium-webdriver/chrome.js';
 import firefox from 'selenium-webdriver/firefox.js';
 import edge from 'selenium-webdriver/edge.js';
 
-// Automatically fetch drivers using require
 import 'chromedriver';
 import 'geckodriver';
-//import 'msedgedriver'; // Uncomment if using Edge
+//import 'msedgedriver'; 
 
 const getDriver = async (browser) => {
   let driver;

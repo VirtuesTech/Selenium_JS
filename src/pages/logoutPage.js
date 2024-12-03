@@ -3,8 +3,8 @@ import { By } from 'selenium-webdriver';
 
 class LogoutPage extends BasePage {
   constructor(driver) {
-    super(driver); // Call the parent constructor
-    this.menuButton = By.id('react-burger-menu-bt');
+    super(driver);
+    this.menuButton = By.id('react-burger-menu-btn');
     this.logoutLink = By.id('logout_sidebar_link');
   }
 

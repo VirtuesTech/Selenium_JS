@@ -3,7 +3,7 @@ import { By } from 'selenium-webdriver';
 
 class LoginPage extends BasePage {
   constructor(driver) {
-    super(driver); // Call the parent constructor
+    super(driver);
     this.usernameField = By.id('user-name');
     this.passwordField = By.id('password');
     this.loginButton = By.id('login-button');

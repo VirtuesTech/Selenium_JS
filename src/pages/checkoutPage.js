@@ -30,9 +30,7 @@ class CheckoutPage extends BasePage {
   }
 
   async validateSuccessMsg() {
-    const successMsgElement = await this.findElement(this.successMsg);
-    const isSuccessMessageDisplayed = await successMsgElement.isDisplayed();
-    expect(isSuccessMessageDisplayed).to.be.true;
+    await this.isDisplayed(this.successMsg); 
   }
 
   async backToHome() {

@@ -36,7 +36,7 @@ describe('End-to-End Flow: Login, Product Selection, Checkout, and Logout', func
   it('should complete the checkout process successfully', async function () {
     checkoutPage = new CheckoutPage(driver);
     await checkoutPage.proceedCheckout();
-    //await checkoutPage.validateSuccessMsg();
+    await checkoutPage.validateSuccessMsg();
     await checkoutPage.backToHome();
   });
 
