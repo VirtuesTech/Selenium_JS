@@ -1,14 +1,14 @@
-import { Builder } from 'selenium-webdriver'; 
-import chrome from 'selenium-webdriver/chrome.js';  
+import { Builder } from 'selenium-webdriver';
+import chrome from 'selenium-webdriver/chrome.js';
 import firefox from 'selenium-webdriver/firefox.js';
-import edge from 'selenium-webdriver/edge.js';  
+import edge from 'selenium-webdriver/edge.js';
 
 // Automatically fetch drivers using require
-import 'chromedriver'; 
-import 'geckodriver'; 
-//import 'msedgedriver';
+import 'chromedriver';
+import 'geckodriver';
+//import 'msedgedriver'; // Uncomment if using Edge
 
-const getDriver = (browser) => {
+const getDriver = async (browser) => {
   let driver;
 
   switch(browser) {
@@ -33,7 +33,7 @@ const getDriver = (browser) => {
     default:
       throw new Error('Browser not supported');
   }
-
+ await driver.manage().window().maximize();
   return driver;
 };
 

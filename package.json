@@ -4,13 +4,16 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "mocha src/tests/*.js"
-  },
+    "test": "mocha --reporter allure-mocha src/tests/*.js & allure generate allure-results --clean & allure open"
+   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "allure-commandline": "^2.32.0",
+    "allure-js-commons": "^3.0.6",
+    "allure-mocha": "^3.0.6",
     "chai": "^5.1.2",
     "chromedriver": "^131.0.1",
     "geckodriver": "^5.0.0",
@@ -20,6 +23,8 @@
     "webdriver-manager": "^12.1.9"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "@faker-js/faker": "^9.3.0",
+    "dotenv": "^16.4.5",
+    "faker": "^6.6.6"
   }
 }
