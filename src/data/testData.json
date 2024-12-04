@@ -1,0 +1,29 @@
+{
+    "getRequest": {
+      "url": "https://jsonplaceholder.typicode.com/posts/1",
+      "expectedStatus": 200,
+      "expectedId": 1
+    },
+    "postRequest": {
+      "url": "https://jsonplaceholder.typicode.com/posts",
+      "payload": { "title": "foo", "body": "bar", "userId": 1 },
+      "expectedStatus": 201
+    },
+    "putRequest": {
+      "url": "https://jsonplaceholder.typicode.com/posts/1",
+      "payload": { "id": 1, "title": "updated title", "body": "updated body", "userId": 1 },
+      "expectedStatus": 200,
+      "expectedTitle": "updated title"
+    },
+    "patchRequest": {
+      "url": "https://jsonplaceholder.typicode.com/posts/1",
+      "payload": { "title": "patched title" },
+      "expectedStatus": 200,
+      "expectedTitle": "patched title"
+    },
+    "deleteRequest": {
+      "url": "https://jsonplaceholder.typicode.com/posts/1",
+      "expectedStatus": 200
+    }
+  }
+  
